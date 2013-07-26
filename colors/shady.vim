@@ -51,17 +51,19 @@ if version >= 700 " Vim 7.x specific colors
   hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
   hi TabLineSel         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi Pmenu              ctermfg=NONE        ctermbg=NONE        cterm=NONE
+  hi Pmenu              ctermfg=NONE        ctermbg=235         cterm=NONE
   hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
   hi Search             ctermfg=yellow      ctermbg=NONE        cterm=REVERSE
 endif
 
 " Syntax highlighting
 hi Comment              ctermfg=238        ctermbg=NONE        cterm=NONE
+hi SpecialComment       ctermfg=237        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
-hi PreProc              ctermfg=194        ctermbg=NONE        cterm=NONE
+hi PreProc              ctermfg=white      ctermbg=NONE        cterm=BOLD
+hi Operator             ctermfg=white      ctermbg=NONE        cterm=NONE
 
 hi Keyword              ctermfg=white       ctermbg=NONE       cterm=BOLD
 hi Statement            ctermfg=white       ctermbg=NONE       cterm=BOLD
@@ -71,13 +73,13 @@ hi Todo                 ctermfg=240         ctermbg=NONE       cterm=BOLD
 hi Constant             ctermfg=white       ctermbg=NONE       cterm=BOLD
 
 hi Identifier           ctermfg=109         ctermbg=NONE       cterm=NONE
-hi Function             ctermfg=109         ctermbg=NONE       cterm=NONE
+hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
 hi Class                ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Type                 ctermfg=109         ctermbg=NONE       cterm=BOLD
 hi Label                ctermfg=yellow      ctermbg=NONE       cterm=NONE
 
 hi Special              ctermfg=red         ctermbg=NONE       cterm=NONE
-hi Delimiter            ctermfg=cyan        ctermbg=NONE       cterm=NONE
+hi Delimiter            ctermfg=grey        ctermbg=NONE       cterm=NONE
 
 hi cIdentifier          ctermfg=255         ctermbg=NONE       cterm=NONE
 hi cFunction            ctermfg=109         ctermbg=NONE       cterm=NONE
@@ -88,11 +90,16 @@ hi cPreProc             ctermfg=240         ctermbg=NONE       cterm=BOLD
 
 " Pandoc
 hi pdcCodeBlock         ctermfg=246         ctermbg=232        cterm=NONE
-hi pdcEmphasis	        ctermfg=NONE	      ctermbg=NONE       cterm=ITALIC
-hi pdcStrong  	        ctermfg=NONE	      ctermbg=NONE       cterm=BOLD
+hi pdcEmphasis	        ctermfg=NONE	    ctermbg=NONE       cterm=ITALIC
+hi pdcStrong  	        ctermfg=NONE	    ctermbg=NONE       cterm=BOLD
 hi pdcBlockquote  	    ctermfg=109	        ctermbg=NONE       cterm=ITALIC
 
+hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
+
 hi link pdcCode pdcCodeBlock
+
+" Haskell
+hi hsType  	    ctermfg=248	        ctermbg=NONE       cterm=NONE
 
 " C
 hi link cMacro          cIdentifier
@@ -115,7 +122,6 @@ hi link StorageClass    Keyword
 hi link Structure       Keyword
 hi link Typedef         Type
 hi link SpecialChar     Special
-hi link SpecialComment  Special
 hi link Debug           Special
 
 " Javascript
@@ -140,3 +146,12 @@ hi link javaScriptGlobalObjects  Class   " Array Boolean Date Function Infinity 
 hi shCommandSub	    	ctermfg=white
 hi link shOperator 		String
 hi link shDeref   		Identifier
+
+" Ruby
+hi link rubyControl           Keyword
+hi link rubySymbol            Function
+hi link rubyBoolean           GreyBold
+hi link rubyPseudoVariable    Keyword
+hi link rubyArrayDelimiter    Delimiter
+hi link rubyOperator          Operator
+hi link rubyPseudoOperator    Operator
