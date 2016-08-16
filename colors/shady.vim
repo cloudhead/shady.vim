@@ -37,9 +37,9 @@ hi SpecialKey           ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi WildMenu             ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
-hi Error                ctermfg=NONE        ctermbg=red         cterm=NONE
-hi ErrorMsg             ctermfg=NONE        ctermbg=52          cterm=NONE
-hi WarningMsg           ctermfg=NONE        ctermbg=172         cterm=NONE
+hi Error                ctermfg=black        ctermbg=red         cterm=NONE
+hi ErrorMsg             ctermfg=black        ctermbg=52          cterm=NONE
+hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
