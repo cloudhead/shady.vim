@@ -93,16 +93,16 @@ hi cPreProc             ctermfg=240         ctermbg=NONE       cterm=BOLD
 
 " Pandoc
 hi pdcCodeBlock         ctermfg=246         ctermbg=232        cterm=NONE
-hi pdcEmphasis	        ctermfg=NONE	    ctermbg=NONE       cterm=ITALIC
-hi pdcStrong  	        ctermfg=NONE	    ctermbg=NONE       cterm=BOLD
-hi pdcBlockquote  	    ctermfg=109	        ctermbg=NONE       cterm=ITALIC
+hi pdcEmphasis          ctermfg=NONE        ctermbg=NONE       cterm=ITALIC
+hi pdcStrong            ctermfg=NONE        ctermbg=NONE       cterm=BOLD
+hi pdcBlockquote        ctermfg=109         ctermbg=NONE       cterm=ITALIC
 
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 
 hi link pdcCode pdcCodeBlock
 
 " Haskell
-hi hsType  	    ctermfg=248	        ctermbg=NONE       cterm=NONE
+hi hsType               ctermfg=248         ctermbg=NONE       cterm=NONE
 
 " C
 hi link cMacro          cIdentifier
@@ -146,9 +146,9 @@ hi link javaScriptStatement      Keyword " try catch throw with finally
 hi link javaScriptGlobalObjects  Class   " Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage Math Number NaN Object Packages RegExp String Undefined java netscape sun
 
 " Shell
-hi shCommandSub	    	ctermfg=white
-hi link shOperator 		String
-hi link shDeref   		Identifier
+hi shCommandSub         ctermfg=white
+hi link shOperator      String
+hi link shDeref         Identifier
 
 " Ruby
 hi link rubyControl           Keyword
