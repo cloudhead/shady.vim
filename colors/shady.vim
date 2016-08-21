@@ -32,7 +32,7 @@ hi Folded               ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title                ctermfg=NONE        ctermbg=NONE        cterm=BOLD
 hi Visual               ctermfg=NONE        ctermbg=52          cterm=NONE
 
-hi SpecialKey           ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 
 hi WildMenu             ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
