@@ -19,10 +19,10 @@ let colors_name = "shady"
 
 " General colors
 hi Normal               ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi NonText              ctermfg=black       ctermbg=NONE        cterm=NONE
+hi NonText              ctermfg=234         ctermbg=NONE        cterm=NONE
 
 hi Cursor               ctermfg=black       ctermbg=white       cterm=reverse
-hi LineNr               ctermfg=235         ctermbg=NONE        cterm=NONE
+hi LineNr               ctermfg=236         ctermbg=NONE        cterm=NONE
 
 hi VertSplit            ctermfg=236         ctermbg=NONE        cterm=NONE
 hi StatusLine           ctermfg=238         ctermbg=NONE        cterm=NONE
@@ -38,8 +38,11 @@ hi WildMenu             ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
 hi Error                ctermfg=black        ctermbg=red         cterm=NONE
-hi ErrorMsg             ctermfg=black        ctermbg=52          cterm=NONE
+hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
+hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
+hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
+
 
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
@@ -57,8 +60,8 @@ if version >= 700 " Vim 7.x specific colors
 endif
 
 " Syntax highlighting
-hi Comment              ctermfg=238        ctermbg=NONE        cterm=NONE
-hi SpecialComment       ctermfg=237        ctermbg=NONE        cterm=BOLD
+hi Comment              ctermfg=239        ctermbg=NONE        cterm=NONE
+hi SpecialComment       ctermfg=238        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
@@ -128,7 +131,7 @@ hi link Debug           Special
 hi link javaScriptNumber         Number
 hi link javaScriptPrototype      Type    " prototype
 hi link javaScriptIdentifier     Identifier " var this
-hi link javaScriptType           Type    " const undefined void yield 
+hi link javaScriptType           Type    " const undefined void yield
 hi link javaScriptFunction       Keyword " function
 hi link javaScriptRegexpString   Number  " function
 hi link javaScriptSource         Keyword " import export
