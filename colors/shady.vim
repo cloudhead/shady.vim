@@ -18,7 +18,7 @@ endif
 let colors_name = "shady"
 
 " General colors
-hi Normal               ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Normal               ctermfg=251         ctermbg=NONE        cterm=NONE
 hi NonText              ctermfg=234         ctermbg=NONE        cterm=NONE
 
 hi Cursor               ctermfg=black       ctermbg=white       cterm=reverse
@@ -52,7 +52,7 @@ if version >= 700 " Vim 7.x specific colors
   hi CursorColumn       ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi TabLine            ctermfg=238         ctermbg=NONE        cterm=NONE
   hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
-  hi TabLineSel         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+  hi TabLineSel         ctermfg=245         ctermbg=NONE        cterm=NONE
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi Pmenu              ctermfg=NONE        ctermbg=235         cterm=NONE
   hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
@@ -65,15 +65,15 @@ hi SpecialComment       ctermfg=238        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
-hi PreProc              ctermfg=white      ctermbg=NONE        cterm=BOLD
-hi Operator             ctermfg=white      ctermbg=NONE        cterm=NONE
+hi PreProc              ctermfg=253        ctermbg=NONE        cterm=BOLD
+hi Operator             ctermfg=253        ctermbg=NONE        cterm=NONE
 
-hi Keyword              ctermfg=white       ctermbg=NONE       cterm=BOLD
-hi Statement            ctermfg=white       ctermbg=NONE       cterm=BOLD
-hi Conditional          ctermfg=white       ctermbg=NONE       cterm=BOLD
+hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
+hi Statement            ctermfg=253        ctermbg=NONE       cterm=BOLD
+hi Conditional          ctermfg=253        ctermbg=NONE       cterm=BOLD
 
-hi Todo                 ctermfg=240         ctermbg=NONE       cterm=BOLD
-hi Constant             ctermfg=white       ctermbg=NONE       cterm=BOLD
+hi Todo                 ctermfg=240        ctermbg=NONE       cterm=BOLD
+hi Constant             ctermfg=253        ctermbg=NONE       cterm=BOLD
 
 hi Identifier           ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
@@ -102,7 +102,10 @@ hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 hi link pdcCode pdcCodeBlock
 
 " Haskell
-hi hsType               ctermfg=248         ctermbg=NONE       cterm=NONE
+hi      hsType          ctermfg=247         ctermbg=NONE       cterm=NONE
+hi      hsDelimiter     ctermfg=243         ctermbg=NONE       cterm=NONE
+hi link hsVarSym        Normal
+hi link hsTypedef       Keyword
 
 " C
 hi link cMacro          cIdentifier
