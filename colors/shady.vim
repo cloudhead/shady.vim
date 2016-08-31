@@ -42,6 +42,8 @@ hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
 hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
+hi SignColumn           ctermfg=NONE         ctermbg=NONE        cterm=NONE
+hi QuickFixLine         ctermfg=NONE         ctermbg=234         cterm=NONE
 
 
 " Message displayed in lower left, such as --INSERT--
@@ -58,8 +60,6 @@ if version >= 700 " Vim 7.x specific colors
   hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
   hi Search             ctermfg=yellow      ctermbg=NONE        cterm=REVERSE
 endif
-
-hi SignColumn           ctermfg=NONE       ctermbg=black       cterm=NONE
 
 " Syntax highlighting
 hi Comment              ctermfg=239        ctermbg=NONE        cterm=NONE
