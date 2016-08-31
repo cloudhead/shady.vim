@@ -28,7 +28,7 @@ hi VertSplit            ctermfg=236         ctermbg=NONE        cterm=NONE
 hi StatusLine           ctermfg=238         ctermbg=NONE        cterm=NONE
 hi StatusLineNC         ctermfg=236         ctermbg=NONE        cterm=NONE
 
-hi Folded               ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Folded               ctermfg=236         ctermbg=NONE        cterm=NONE
 hi Title                ctermfg=NONE        ctermbg=NONE        cterm=BOLD
 hi Visual               ctermfg=NONE        ctermbg=52          cterm=NONE
 
@@ -58,6 +58,8 @@ if version >= 700 " Vim 7.x specific colors
   hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
   hi Search             ctermfg=yellow      ctermbg=NONE        cterm=REVERSE
 endif
+
+hi SignColumn           ctermfg=NONE       ctermbg=black       cterm=NONE
 
 " Syntax highlighting
 hi Comment              ctermfg=239        ctermbg=NONE        cterm=NONE
