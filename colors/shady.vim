@@ -108,6 +108,9 @@ hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 
 hi link pdcCode pdcCodeBlock
 
+" HTML
+hi link htmlEndTag     htmlTag
+
 " Haskell
 hi      hsType          ctermfg=247         ctermbg=NONE       cterm=NONE
 hi      hsDelimiter     ctermfg=243         ctermbg=NONE       cterm=NONE
