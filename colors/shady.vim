@@ -45,6 +45,11 @@ hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
 hi SignColumn           ctermfg=NONE         ctermbg=NONE        cterm=NONE
 hi QuickFixLine         ctermfg=NONE         ctermbg=234         cterm=NONE
 
+" Vimdiff
+hi DiffAdd              ctermfg=NONE         ctermbg=234          cterm=NONE
+hi DiffDelete           ctermfg=NONE         ctermbg=NONE         cterm=NONE
+hi DiffChange           ctermfg=NONE         ctermbg=NONE         cterm=NONE
+hi DiffText             ctermfg=NONE         ctermbg=234          cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
