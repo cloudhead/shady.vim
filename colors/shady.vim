@@ -21,7 +21,7 @@ let colors_name = "shady"
 hi Normal               ctermfg=251         ctermbg=NONE        cterm=NONE
 hi NonText              ctermfg=234         ctermbg=NONE        cterm=NONE
 
-hi Cursor               ctermfg=black       ctermbg=white       cterm=reverse
+hi Cursor               ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi LineNr               ctermfg=236         ctermbg=NONE        cterm=NONE
 
 hi VertSplit            ctermfg=236         ctermbg=NONE        cterm=NONE
@@ -34,7 +34,7 @@ hi Visual               ctermfg=NONE        ctermbg=52          cterm=NONE
 
 hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 
-hi WildMenu             ctermfg=black       ctermbg=yellow      cterm=NONE
+hi WildMenu             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
 hi Error                ctermfg=black        ctermbg=red         cterm=NONE
@@ -43,13 +43,13 @@ hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
 hi SignColumn           ctermfg=NONE         ctermbg=NONE        cterm=NONE
-hi QuickFixLine         ctermfg=NONE         ctermbg=234         cterm=NONE
+hi QuickFixLine         ctermfg=NONE         ctermbg=52          cterm=NONE
 
 " Vimdiff
-hi DiffAdd              ctermfg=NONE         ctermbg=234          cterm=NONE
-hi DiffDelete           ctermfg=NONE         ctermbg=NONE         cterm=NONE
-hi DiffChange           ctermfg=NONE         ctermbg=NONE         cterm=NONE
-hi DiffText             ctermfg=NONE         ctermbg=234          cterm=NONE
+hi DiffAdd              ctermfg=green         ctermbg=NONE        cterm=NONE
+hi DiffDelete           ctermfg=52            ctermbg=NONE        cterm=NONE
+hi DiffChange           ctermfg=NONE          ctermbg=NONE        cterm=NONE
+hi DiffText             ctermfg=228           ctermbg=NONE        cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
@@ -63,7 +63,7 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi Pmenu              ctermfg=NONE        ctermbg=235         cterm=NONE
   hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
-  hi Search             ctermfg=yellow      ctermbg=NONE        cterm=REVERSE
+  hi Search             ctermfg=NONE        ctermbg=52          cterm=NONE
 endif
 
 " Syntax highlighting
@@ -116,6 +116,7 @@ hi      hsType          ctermfg=247         ctermbg=NONE       cterm=NONE
 hi link hsDelimiter     Delimiter
 hi link hsVarSym        Normal
 hi link hsTypedef       Keyword
+hi link hsNumber        Normal
 
 " C
 hi link cMacro          cIdentifier
