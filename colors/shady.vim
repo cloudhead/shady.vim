@@ -172,3 +172,16 @@ hi link rubyPseudoVariable    Keyword
 hi link rubyArrayDelimiter    Delimiter
 hi link rubyOperator          Operator
 hi link rubyPseudoOperator    Operator
+
+" Markdown
+hi markdownCodeBlock              ctermfg=246        ctermbg=NONE        cterm=ITALIC
+hi markdownCode                   ctermfg=246        ctermbg=NONE        cterm=ITALIC
+hi markdownCodeDelimiter          ctermfg=238        ctermbg=NONE        cterm=ITALIC
+hi markdownRule                   ctermfg=238        ctermbg=NONE        cterm=NONE
+hi markdownBlockquote             ctermfg=238        ctermbg=NONE        cterm=NONE
+hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=BOLD
+hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
+
+hi link markdownHeadingDelimiter markdownRule
+hi link markdownBoldDelimiter markdownBold
+hi link markdownItalicDelimiter markdownItalic
