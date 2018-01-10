@@ -116,7 +116,7 @@ hi      hsType          ctermfg=247         ctermbg=NONE       cterm=NONE
 hi link hsDelimiter     Delimiter
 hi link hsVarSym        Normal
 hi link hsTypedef       Keyword
-hi link hsNumber        Normal
+hi link hsNumber        Number
 
 " C
 hi link cMacro          cIdentifier
