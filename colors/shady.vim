@@ -105,6 +105,7 @@ hi pdcStrong            ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 hi pdcBlockquote        ctermfg=109         ctermbg=NONE       cterm=ITALIC
 
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
+hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
 
 hi link pdcCode pdcCodeBlock
 
@@ -185,3 +186,14 @@ hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=I
 hi link markdownHeadingDelimiter markdownRule
 hi link markdownBoldDelimiter markdownBold
 hi link markdownItalicDelimiter markdownItalic
+
+" RST
+hi link rstBulletList Keyword
+hi link rstEnumeratedList Keyword
+hi link rstDirective_code markdownCodeBlock
+hi link rstInlineLiteral markdownCode
+hi link rstEmphasis markdownItalic
+hi link rstStrongEmphasis markdownBold
+hi link rstSimpleTableLines markdownCodeDelimiter
+hi link rstDirective DarkGreyBold
+hi link rstExplicitMarkup rstDirective
