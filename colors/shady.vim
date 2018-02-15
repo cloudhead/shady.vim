@@ -61,9 +61,9 @@ if version >= 700 " Vim 7.x specific colors
   hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
   hi TabLineSel         ctermfg=245         ctermbg=NONE        cterm=NONE
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi Pmenu              ctermfg=NONE        ctermbg=235         cterm=NONE
-  hi PmenuSel           ctermfg=black       ctermbg=yellow      cterm=NONE
-  hi Search             ctermfg=NONE        ctermbg=52          cterm=NONE
+  hi Pmenu              ctermfg=NONE        ctermbg=234         cterm=NONE
+  hi PmenuSel           ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
+  hi Search             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 endif
 
 " Syntax highlighting
