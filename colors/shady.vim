@@ -109,8 +109,9 @@ hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
 
 hi link pdcCode pdcCodeBlock
 
-" HTML
+" HTML/XML
 hi link htmlEndTag     htmlTag
+hi link xmlEndTag      xmlTag
 
 " Haskell
 hi      hsType          ctermfg=247         ctermbg=NONE       cterm=NONE
