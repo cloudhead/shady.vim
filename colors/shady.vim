@@ -37,7 +37,7 @@ hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 hi WildMenu             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
-hi Error                ctermfg=black        ctermbg=red         cterm=NONE
+hi Error                ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
 hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
@@ -72,7 +72,7 @@ hi SpecialComment       ctermfg=238        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
-hi PreProc              ctermfg=253        ctermbg=NONE        cterm=BOLD
+hi PreProc              ctermfg=240        ctermbg=NONE        cterm=BOLD
 hi Operator             ctermfg=253        ctermbg=NONE        cterm=NONE
 
 hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
@@ -96,7 +96,6 @@ hi cFunction            ctermfg=109         ctermbg=NONE       cterm=NONE
 hi cStorageClass        ctermfg=255         ctermbg=NONE       cterm=BOLD
 hi cOperator            ctermfg=109         ctermbg=NONE       cterm=BOLD
 hi cPointerOperator     ctermfg=244         ctermbg=NONE       cterm=NONE
-hi cPreProc             ctermfg=240         ctermbg=NONE       cterm=BOLD
 
 " Pandoc
 hi pdcCodeBlock         ctermfg=246         ctermbg=232        cterm=NONE
@@ -123,9 +122,9 @@ hi link hsNumber        Number
 " C
 hi link cMacro          cIdentifier
 hi link cOctalZero      Number
-hi link cInclude        cPreProc
-hi link cDefine         cPreProc
-hi link cPreCondit      cPreProc
+hi link cInclude        PreProc
+hi link cDefine         PreProc
+hi link cPreCondit      PreProc
 
 hi link Conditional     Keyword
 hi link Statement       Normal
@@ -198,3 +197,14 @@ hi link rstStrongEmphasis markdownBold
 hi link rstSimpleTableLines markdownCodeDelimiter
 hi link rstDirective DarkGreyBold
 hi link rstExplicitMarkup rstDirective
+
+" Rust
+hi link rustModPath          Normal
+hi link rustAttribute        PreProc
+hi link rustDeriveTrait      PreProc
+hi link rustMacro            Function
+hi link rustAssert           rustMacro
+hi link rustSigil            Function
+hi link rustLifetime         rustSigil
+hi link rustIdentifier       Normal
+hi link rustCommentLineDoc   Comment
