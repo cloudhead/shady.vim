@@ -72,8 +72,9 @@ hi SpecialComment       ctermfg=238        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
-hi PreProc              ctermfg=240        ctermbg=NONE        cterm=BOLD
+hi PreProc              ctermfg=253        ctermbg=NONE        cterm=BOLD
 hi Operator             ctermfg=253        ctermbg=NONE        cterm=NONE
+hi Pragma               ctermfg=240         ctermbg=NONE       cterm=BOLD
 
 hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
 hi Statement            ctermfg=253        ctermbg=NONE       cterm=BOLD
@@ -200,8 +201,8 @@ hi link rstExplicitMarkup rstDirective
 
 " Rust
 hi link rustModPath          Normal
-hi link rustAttribute        PreProc
-hi link rustDeriveTrait      PreProc
+hi link rustAttribute        Pragma
+hi link rustDeriveTrait      Pragma
 hi link rustMacro            Function
 hi link rustAssert           rustMacro
 hi link rustSigil            Function
