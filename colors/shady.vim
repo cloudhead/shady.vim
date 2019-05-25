@@ -61,7 +61,7 @@ if version >= 700 " Vim 7.x specific colors
   hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
   hi TabLineSel         ctermfg=245         ctermbg=NONE        cterm=NONE
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-  hi Pmenu              ctermfg=NONE        ctermbg=234         cterm=NONE
+  hi Pmenu              ctermfg=NONE        ctermbg=233         cterm=NONE
   hi PmenuSel           ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
   hi Search             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 endif
@@ -74,7 +74,7 @@ hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
 hi PreProc              ctermfg=253        ctermbg=NONE        cterm=BOLD
 hi Operator             ctermfg=253        ctermbg=NONE        cterm=NONE
-hi Pragma               ctermfg=240         ctermbg=NONE       cterm=BOLD
+hi Pragma               ctermfg=240        ctermbg=NONE        cterm=BOLD
 
 hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
 hi Statement            ctermfg=253        ctermbg=NONE       cterm=BOLD
@@ -123,9 +123,10 @@ hi link hsNumber        Number
 " C
 hi link cMacro          cIdentifier
 hi link cOctalZero      Number
-hi link cInclude        PreProc
-hi link cDefine         PreProc
-hi link cPreCondit      PreProc
+hi link cPreProc        Pragma
+hi link cInclude        cPreProc
+hi link cDefine         cPreProc
+hi link cPreCondit      cPreProc
 
 hi link Conditional     Keyword
 hi link Statement       Normal
@@ -203,6 +204,7 @@ hi link rstExplicitMarkup rstDirective
 hi link rustModPath          Normal
 hi link rustAttribute        Pragma
 hi link rustDeriveTrait      Pragma
+hi link rustDerive           Pragma
 hi link rustMacro            Function
 hi link rustAssert           rustMacro
 hi link rustSigil            Function
