@@ -37,6 +37,7 @@ hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 hi WildMenu             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
+hi Warning              ctermfg=yellow       ctermbg=NONE        cterm=BOLD
 hi Error                ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
 hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
@@ -55,7 +56,8 @@ hi DiffText             ctermfg=228           ctermbg=NONE        cterm=NONE
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine         ctermfg=NONE        ctermbg=NONE        cterm=NONE
+  hi CursorLine         ctermfg=NONE        ctermbg=235         cterm=NONE
+  hi CursorLineNR       ctermfg=236         ctermbg=NONE        cterm=NONE
   hi CursorColumn       ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi TabLine            ctermfg=238         ctermbg=NONE        cterm=NONE
   hi TabLineFill        ctermfg=238         ctermbg=NONE        cterm=NONE
@@ -211,3 +213,7 @@ hi link rustSigil            Function
 hi link rustLifetime         rustSigil
 hi link rustIdentifier       Normal
 hi link rustCommentLineDoc   Comment
+
+" CoC
+hi link CocErrorVirtualText    Error
+hi link CocWarningVirtualText  Warning
