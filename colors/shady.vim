@@ -40,11 +40,14 @@ hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 hi Warning              ctermfg=yellow       ctermbg=NONE        cterm=BOLD
 hi Error                ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
-hi ErrorSign            ctermfg=52           ctermbg=NONE        cterm=BOLD
+hi ErrorSign            ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
 hi SignColumn           ctermfg=NONE         ctermbg=NONE        cterm=NONE
 hi QuickFixLine         ctermfg=NONE         ctermbg=52          cterm=NONE
+hi SpellBad             ctermfg=NONE         ctermbg=NONE        cterm=undercurl    guisp=grey
+hi SpellCap             ctermfg=NONE         ctermbg=NONE        cterm=NONE
+hi SpellRare            ctermfg=NONE         ctermbg=NONE        cterm=NONE
 
 " Vimdiff
 hi DiffAdd              ctermfg=green         ctermbg=NONE        cterm=NONE
@@ -106,8 +109,10 @@ hi pdcEmphasis          ctermfg=NONE        ctermbg=NONE       cterm=ITALIC
 hi pdcStrong            ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 hi pdcBlockquote        ctermfg=109         ctermbg=NONE       cterm=ITALIC
 
+hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
+hi Bright               ctermfg=white       ctermbg=NONE       cterm=NONE
 
 hi link pdcCode pdcCodeBlock
 
@@ -204,6 +209,7 @@ hi link rstExplicitMarkup rstDirective
 
 " Rust
 hi link rustModPath          Normal
+hi link rustModPathSep       Grey
 hi link rustAttribute        Pragma
 hi link rustDeriveTrait      Pragma
 hi link rustDerive           Pragma
@@ -213,6 +219,7 @@ hi link rustSigil            Function
 hi link rustLifetime         rustSigil
 hi link rustIdentifier       Normal
 hi link rustCommentLineDoc   Comment
+hi link rustQuestionMark     rustSigil
 
 " CoC
 hi link CocErrorVirtualText    Error
