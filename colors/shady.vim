@@ -44,6 +44,7 @@ hi ErrorSign            ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
 hi SignColumn           ctermfg=NONE         ctermbg=NONE        cterm=NONE
+hi FoldColumn           ctermfg=239          ctermbg=NONE        cterm=NONE
 hi QuickFixLine         ctermfg=NONE         ctermbg=52          cterm=NONE
 hi SpellBad             ctermfg=NONE         ctermbg=NONE        cterm=undercurl    guisp=grey
 hi SpellCap             ctermfg=NONE         ctermbg=NONE        cterm=NONE
