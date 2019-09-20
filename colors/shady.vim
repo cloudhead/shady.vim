@@ -114,10 +114,13 @@ hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
 hi Bright               ctermfg=white       ctermbg=NONE       cterm=NONE
+hi Bold                 ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 
 hi link pdcCode pdcCodeBlock
 
 " HTML/XML
+hi link htmlBold       markdownBold
+hi link htmlItalic     markdownItalic
 hi link htmlEndTag     htmlTag
 hi link xmlEndTag      xmlTag
 
@@ -193,9 +196,16 @@ hi markdownBlockquote             ctermfg=238        ctermbg=NONE        cterm=N
 hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=BOLD
 hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
 
-hi link markdownHeadingDelimiter markdownRule
-hi link markdownBoldDelimiter markdownBold
-hi link markdownItalicDelimiter markdownItalic
+hi link markdownHeadingDelimiter   markdownRule
+hi link markdownBoldDelimiter      markdownBold
+hi link markdownItalicDelimiter    markdownItalic
+
+hi link mkdHeading           markdownHeadingDelimiter
+hi link mkdListItem          DarkGreyBold
+hi link mkdItalic            markdownItalic
+hi link mkdBold              markdownBold
+hi link mkdCode              markdownCode
+hi link mkdCodeDelimiter     markdownCodeDelimiter
 
 " RST
 hi link rstBulletList Keyword
