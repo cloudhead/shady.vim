@@ -73,7 +73,7 @@ if version >= 700 " Vim 7.x specific colors
 endif
 
 " Syntax highlighting
-hi Comment              ctermfg=239        ctermbg=NONE        cterm=NONE
+hi Comment              ctermfg=239        ctermbg=NONE        cterm=ITALIC
 hi SpecialComment       ctermfg=238        ctermbg=NONE        cterm=BOLD
 hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
@@ -113,6 +113,7 @@ hi pdcBlockquote        ctermfg=109         ctermbg=NONE       cterm=ITALIC
 hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
+hi DarkGrey             ctermfg=239         ctermbg=NONE       cterm=NONE
 hi Bright               ctermfg=white       ctermbg=NONE       cterm=NONE
 hi Bold                 ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 
@@ -206,6 +207,7 @@ hi link mkdItalic            markdownItalic
 hi link mkdBold              markdownBold
 hi link mkdCode              markdownCode
 hi link mkdCodeDelimiter     markdownCodeDelimiter
+hi link mkdRule              markdownRule
 
 " RST
 hi link rstBulletList Keyword
@@ -235,3 +237,13 @@ hi link rustQuestionMark     rustSigil
 " CoC
 hi link CocErrorVirtualText    Error
 hi link CocWarningVirtualText  Warning
+
+" Todo
+highlight link todoOther    Bold
+highlight link todoCheckbox DarkGrey
+highlight link todoComment  DarkGrey
+highlight link todoDone     DarkGrey
+highlight link todoNormal   Normal
+
+" Zsh
+hi link zshPrecommand       Keyword
