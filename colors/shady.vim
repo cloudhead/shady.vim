@@ -86,7 +86,7 @@ hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
 hi Statement            ctermfg=253        ctermbg=NONE       cterm=BOLD
 hi Conditional          ctermfg=253        ctermbg=NONE       cterm=BOLD
 
-hi Todo                 ctermfg=240        ctermbg=NONE       cterm=BOLD
+hi Todo                 ctermfg=240        ctermbg=NONE       cterm=BOLD,ITALIC
 hi Constant             ctermfg=253        ctermbg=NONE       cterm=BOLD
 
 hi Identifier           ctermfg=109         ctermbg=NONE       cterm=NONE
@@ -237,6 +237,10 @@ hi link rustQuestionMark     rustSigil
 " CoC
 hi link CocErrorVirtualText    Error
 hi link CocWarningVirtualText  Warning
+" These only use an 'undercurl'. The colors used are
+" 'maroon' and 'moccasin'.
+hi      CocWarningHighlight    cterm=undercurl guisp=#FFE4B5
+hi      CocErrorHighlight      cterm=undercurl guisp=#B03060
 
 " Todo
 highlight link todoOther    Bold
