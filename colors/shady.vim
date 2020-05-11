@@ -30,7 +30,7 @@ hi StatusLineNC         ctermfg=236         ctermbg=NONE        cterm=NONE
 
 hi Folded               ctermfg=236         ctermbg=NONE        cterm=NONE
 hi Title                ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-hi Visual               ctermfg=NONE        ctermbg=52          cterm=NONE
+hi Visual               ctermfg=NONE        ctermbg=red         cterm=NONE
 
 hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 
@@ -39,7 +39,7 @@ hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
 hi Warning              ctermfg=yellow       ctermbg=NONE        cterm=BOLD
 hi Error                ctermfg=red          ctermbg=NONE        cterm=BOLD
-hi ErrorMsg             ctermfg=NONE         ctermbg=52          cterm=NONE
+hi ErrorMsg             ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi ErrorSign            ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
 hi ColorColumn          ctermfg=NONE         ctermbg=233         cterm=NONE
@@ -157,6 +157,7 @@ hi link SpecialChar     Special
 hi link Debug           Special
 
 " Javascript
+hi link javaScript               Normal
 hi link javaScriptNumber         Number
 hi link javaScriptPrototype      Type    " prototype
 hi link javaScriptIdentifier     Identifier " var this
@@ -206,6 +207,7 @@ hi link mkdListItem          DarkGreyBold
 hi link mkdItalic            markdownItalic
 hi link mkdBold              markdownBold
 hi link mkdCode              markdownCode
+hi link mkdBlockquote        markdownCode
 hi link mkdCodeDelimiter     markdownCodeDelimiter
 hi link mkdRule              markdownRule
 
@@ -237,6 +239,9 @@ hi link rustQuestionMark     rustSigil
 " CoC
 hi link CocErrorVirtualText    Error
 hi link CocWarningVirtualText  Warning
+hi link CocErrorSign           Error
+hi link CocWarningSign         Warning
+hi link CocRustChainingHint    DarkGrey
 " These only use an 'undercurl'. The colors used are
 " 'maroon' and 'moccasin'.
 hi      CocWarningHighlight    cterm=undercurl guisp=#FFE4B5
