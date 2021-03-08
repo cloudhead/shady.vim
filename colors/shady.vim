@@ -3,11 +3,6 @@
 "
 "     a vim colorscheme, by cloudhead
 "
-"  To be used with the following syntax files:
-"
-"    JavaScript - <http://www.vim.org/scripts/script.php?script_id=1491>
-"    C          - <http://www.vim.org/scripts/script.php?script_id=234>
-"
 set background=dark
 hi clear
 
@@ -30,7 +25,7 @@ hi StatusLineNC         ctermfg=236         ctermbg=NONE        cterm=NONE
 
 hi Folded               ctermfg=236         ctermbg=NONE        cterm=NONE
 hi Title                ctermfg=NONE        ctermbg=NONE        cterm=BOLD
-hi Visual               ctermfg=NONE        ctermbg=red         cterm=NONE
+hi Visual               ctermfg=NONE        ctermbg=235         cterm=NONE
 
 hi SpecialKey           ctermfg=235         ctermbg=NONE        cterm=NONE
 
@@ -38,7 +33,7 @@ hi WildMenu             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 hi PmenuSbar            ctermfg=black       ctermbg=white       cterm=NONE
 
 hi Warning              ctermfg=yellow       ctermbg=NONE        cterm=BOLD
-hi Error                ctermfg=red          ctermbg=NONE        cterm=BOLD
+hi Error                ctermfg=red          ctermbg=NONE        cterm=NONE
 hi ErrorMsg             ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi ErrorSign            ctermfg=red          ctermbg=NONE        cterm=BOLD
 hi WarningMsg           ctermfg=black        ctermbg=172         cterm=NONE
@@ -50,10 +45,10 @@ hi SpellBad             ctermfg=NONE         ctermbg=NONE        cterm=undercurl
 hi SpellCap             ctermfg=NONE         ctermbg=NONE        cterm=NONE
 hi SpellRare            ctermfg=NONE         ctermbg=NONE        cterm=NONE
 
-" Vimdiff
+" Vimdiff / Gitgutter
 hi DiffAdd              ctermfg=green         ctermbg=NONE        cterm=NONE
 hi DiffDelete           ctermfg=52            ctermbg=NONE        cterm=NONE
-hi DiffChange           ctermfg=NONE          ctermbg=NONE        cterm=NONE
+hi DiffChange           ctermfg=yellow        ctermbg=NONE        cterm=NONE
 hi DiffText             ctermfg=228           ctermbg=NONE        cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
@@ -68,7 +63,9 @@ if version >= 700 " Vim 7.x specific colors
   hi TabLineSel         ctermfg=245         ctermbg=NONE        cterm=NONE
   hi MatchParen         ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi Pmenu              ctermfg=NONE        ctermbg=233         cterm=NONE
+  hi PmenuSbar          ctermfg=NONE        ctermbg=233         cterm=NONE
   hi PmenuSel           ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
+  hi PmenuThumb         ctermfg=NONE        ctermbg=235         cterm=NONE
   hi Search             ctermfg=NONE        ctermbg=NONE        cterm=REVERSE
 endif
 
@@ -92,8 +89,7 @@ hi Constant             ctermfg=253        ctermbg=NONE       cterm=BOLD
 hi Identifier           ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
 hi Class                ctermfg=109         ctermbg=NONE       cterm=NONE
-hi Type                 ctermfg=109         ctermbg=NONE       cterm=BOLD
-hi Label                ctermfg=yellow      ctermbg=NONE       cterm=NONE
+hi Type                 ctermfg=109         ctermbg=NONE       cterm=NONE
 
 hi Special              ctermfg=red         ctermbg=NONE       cterm=NONE
 hi Delimiter            ctermfg=grey        ctermbg=NONE       cterm=NONE
@@ -114,9 +110,12 @@ hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
 hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
 hi DarkGrey             ctermfg=239         ctermbg=NONE       cterm=NONE
-hi Bright               ctermfg=white       ctermbg=NONE       cterm=NONE
+hi Bright               ctermfg=253         ctermbg=NONE       cterm=NONE
 hi Bold                 ctermfg=NONE        ctermbg=NONE       cterm=BOLD
+hi Urgent               ctermfg=red         ctermbg=NONE       cterm=INVERSE
+hi Alternative          ctermfg=109         ctermbg=NONE       cterm=NONE
 
+hi link Label   Alternative
 hi link pdcCode pdcCodeBlock
 
 " HTML/XML
@@ -155,25 +154,26 @@ hi link Structure       Keyword
 hi link Typedef         Type
 hi link SpecialChar     Special
 hi link Debug           Special
+hi link Operator        Keyword
 
-" Javascript
-hi link javaScript               Normal
-hi link javaScriptNumber         Number
-hi link javaScriptPrototype      Type    " prototype
-hi link javaScriptIdentifier     Identifier " var this
-hi link javaScriptType           Type    " const undefined void yield
-hi link javaScriptFunction       Keyword " function
-hi link javaScriptRegexpString   Number  " function
-hi link javaScriptSource         Keyword " import export
-hi link javaScriptOperator       Keyword " delete new in instanceof let typeof
-hi link javaScriptBoolean        Keyword " true false
-hi link javaScriptNull           Keyword " null
-hi link javaScriptLabel          Label   " length:
-hi link javaScriptConditional    Keyword " if else
-hi link javaScriptRepeat         Keyword " do while for
-hi link javaScriptBranch         Keyword " break continue switch case default return
-hi link javaScriptStatement      Keyword " try catch throw with finally
-hi link javaScriptGlobalObjects  Class   " Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage Math Number NaN Object Packages RegExp String Undefined java netscape sun
+" JavaScript
+hi link jsNumber         Number
+hi link jsPrototype      Type    " prototype
+hi link jsIdentifier     Identifier " var this
+hi link jsType           Type    " const undefined void yield
+hi link jsFunction       Keyword " function
+hi link jsRegexpString   Number  " function
+hi link jsSource         Keyword " import export
+hi link jsOperator       Keyword " delete new in instanceof let typeof
+hi link jsBoolean        Keyword " true false
+hi link jsNull           Keyword " null
+hi link jsBlockLabel     Normal
+hi link jsLabel          Label   " length:
+hi link jsConditional    Keyword " if else
+hi link jsRepeat         Keyword " do while for
+hi link jsBranch         Keyword " break continue switch case default return
+hi link jsStatement      Keyword " try catch throw with finally
+hi link jsGlobalObjects  Class   " Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage Math Number NaN Object Packages RegExp String Undefined java netscape sun
 
 " Shell
 hi shCommandSub         ctermfg=white
@@ -197,19 +197,23 @@ hi markdownRule                   ctermfg=238        ctermbg=NONE        cterm=N
 hi markdownBlockquote             ctermfg=238        ctermbg=NONE        cterm=NONE
 hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=BOLD
 hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
+hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=BOLD
+hi markdownH2                     ctermfg=251        ctermbg=NONE        cterm=BOLD
 
 hi link markdownHeadingDelimiter   markdownRule
 hi link markdownBoldDelimiter      markdownBold
 hi link markdownItalicDelimiter    markdownItalic
+hi link markdownListMarker         DarkGreyBold
 
 hi link mkdHeading           markdownHeadingDelimiter
-hi link mkdListItem          DarkGreyBold
+hi link mkdListItem          markdownListMarker
 hi link mkdItalic            markdownItalic
 hi link mkdBold              markdownBold
 hi link mkdCode              markdownCode
 hi link mkdBlockquote        markdownCode
 hi link mkdCodeDelimiter     markdownCodeDelimiter
 hi link mkdRule              markdownRule
+
 
 " RST
 hi link rstBulletList Keyword
@@ -235,24 +239,45 @@ hi link rustLifetime         rustSigil
 hi link rustIdentifier       Normal
 hi link rustCommentLineDoc   Comment
 hi link rustQuestionMark     rustSigil
+hi link rustStorage          Alternative
+hi link rustSelf             Bright
+
+" Typescript
+hi link typescriptExceptions Normal
 
 " CoC
 hi link CocErrorVirtualText    Error
-hi link CocWarningVirtualText  Warning
 hi link CocErrorSign           Error
+hi      CocErrorHighlight      cterm=undercurl guisp=#B03060
+hi      CocErrorFloat          ctermfg=black ctermbg=red
+
+hi link CocWarningVirtualText  Warning
 hi link CocWarningSign         Warning
+hi      CocWarningHighlight    cterm=undercurl guisp=#FFE4B5
+
+hi link CocInfoVirtualText     Alternative
+hi link CocInfoSign            Alternative
+hi      CocInfoHighlight       cterm=underline guisp=blue
+
+hi link CocHintVirtualText     Alternative
+hi link CocHintSign            Alternative
+hi      CocHintHighlight       cterm=none guisp=blue
+
 hi link CocRustChainingHint    DarkGrey
 " These only use an 'undercurl'. The colors used are
 " 'maroon' and 'moccasin'.
-hi      CocWarningHighlight    cterm=undercurl guisp=#FFE4B5
-hi      CocErrorHighlight      cterm=undercurl guisp=#B03060
+hi link CocHintSign            DarkGrey
+hi link CocCodeLens            DarkGrey
+hi link CocFloating            Pmenu
 
 " Todo
-highlight link todoOther    Bold
-highlight link todoCheckbox DarkGrey
-highlight link todoComment  DarkGrey
-highlight link todoDone     DarkGrey
-highlight link todoNormal   Normal
+highlight link todoOther      Bold
+highlight link todoCheckbox   DarkGrey
+highlight link todoComment    DarkGrey
+highlight link todoDone       DarkGrey
+highlight link todoNormal     Normal
+highlight link todoImportant  ErrorMsg
+highlight link todoUrgent     Urgent
 
 " Zsh
 hi link zshPrecommand       Keyword
