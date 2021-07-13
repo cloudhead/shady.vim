@@ -51,6 +51,10 @@ hi DiffDelete           ctermfg=52            ctermbg=NONE        cterm=NONE
 hi DiffChange           ctermfg=yellow        ctermbg=NONE        cterm=NONE
 hi DiffText             ctermfg=228           ctermbg=NONE        cterm=NONE
 
+" Git commit
+hi diffAdded            ctermfg=green
+hi diffRemoved          ctermfg=red
+
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
 
@@ -91,7 +95,8 @@ hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
 hi Class                ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Type                 ctermfg=109         ctermbg=NONE       cterm=NONE
 
-hi Special              ctermfg=red         ctermbg=NONE       cterm=NONE
+hi Special              ctermfg=109         ctermbg=NONE       cterm=NONE
+hi Hint                 ctermfg=237         ctermbg=NONE       cterm=ITALIC
 hi Delimiter            ctermfg=grey        ctermbg=NONE       cterm=NONE
 
 hi cIdentifier          ctermfg=255         ctermbg=NONE       cterm=NONE
@@ -105,6 +110,8 @@ hi pdcCodeBlock         ctermfg=246         ctermbg=232        cterm=NONE
 hi pdcEmphasis          ctermfg=NONE        ctermbg=NONE       cterm=ITALIC
 hi pdcStrong            ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 hi pdcBlockquote        ctermfg=109         ctermbg=NONE       cterm=ITALIC
+hi link pdcCode         pdcCodeBlock
+
 
 hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
 hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
@@ -113,14 +120,12 @@ hi DarkGrey             ctermfg=239         ctermbg=NONE       cterm=NONE
 hi Bright               ctermfg=253         ctermbg=NONE       cterm=NONE
 hi Bold                 ctermfg=NONE        ctermbg=NONE       cterm=BOLD
 hi Urgent               ctermfg=red         ctermbg=NONE       cterm=INVERSE
-hi Alternative          ctermfg=109         ctermbg=NONE       cterm=NONE
-
-hi link Label   Alternative
-hi link pdcCode pdcCodeBlock
+hi link Alternative     Special
+hi link Label           Alternative
 
 " HTML/XML
-hi link htmlBold       markdownBold
-hi link htmlItalic     markdownItalic
+hi link htmlBold       Normal
+hi link htmlItalic     Normal
 hi link htmlEndTag     htmlTag
 hi link xmlEndTag      xmlTag
 
@@ -158,6 +163,7 @@ hi link Operator        Keyword
 
 " JavaScript
 hi link jsNumber         Number
+hi link jsModuleKeyword  Keyword
 hi link jsPrototype      Type    " prototype
 hi link jsIdentifier     Identifier " var this
 hi link jsType           Type    " const undefined void yield
@@ -194,7 +200,7 @@ hi markdownCodeBlock              ctermfg=246        ctermbg=NONE        cterm=I
 hi markdownCode                   ctermfg=246        ctermbg=NONE        cterm=ITALIC
 hi markdownCodeDelimiter          ctermfg=238        ctermbg=NONE        cterm=ITALIC
 hi markdownRule                   ctermfg=238        ctermbg=NONE        cterm=NONE
-hi markdownBlockquote             ctermfg=238        ctermbg=NONE        cterm=NONE
+hi markdownBlockquote             ctermfg=242        ctermbg=NONE        cterm=ITALIC
 hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=BOLD
 hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
 hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=BOLD
@@ -204,6 +210,9 @@ hi link markdownHeadingDelimiter   markdownRule
 hi link markdownBoldDelimiter      markdownBold
 hi link markdownItalicDelimiter    markdownItalic
 hi link markdownListMarker         DarkGreyBold
+hi link markdownItemDelimiter      markdownListMarker
+hi link markdownInlineDelimiter    Comment
+hi link markdownXmlComment         Comment
 
 hi link mkdHeading           markdownHeadingDelimiter
 hi link mkdListItem          markdownListMarker
@@ -243,7 +252,8 @@ hi link rustStorage          Alternative
 hi link rustSelf             Bright
 
 " Typescript
-hi link typescriptExceptions Normal
+hi link typescriptExceptions Keyword
+hi link typescriptOperator   Keyword
 
 " CoC
 hi link CocErrorVirtualText    Error
@@ -266,7 +276,7 @@ hi      CocHintHighlight       cterm=none guisp=blue
 hi link CocRustChainingHint    DarkGrey
 " These only use an 'undercurl'. The colors used are
 " 'maroon' and 'moccasin'.
-hi link CocHintSign            DarkGrey
+hi link CocHintSign            Hint
 hi link CocCodeLens            DarkGrey
 hi link CocFloating            Pmenu
 
@@ -281,3 +291,8 @@ highlight link todoUrgent     Urgent
 
 " Zsh
 hi link zshPrecommand       Keyword
+
+" GraphQL
+hi link graphqlName Normal
+hi link graphqlType Type
+hi      graphqlVariable ctermfg=246 ctermbg=NONE cterm=ITALIC
