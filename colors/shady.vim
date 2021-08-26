@@ -55,6 +55,8 @@ hi DiffText             ctermfg=228           ctermbg=NONE        cterm=NONE
 hi diffAdded            ctermfg=green
 hi diffRemoved          ctermfg=red
 
+hi gitCommitOverflow    ctermfg=NONE        ctermbg=red         cterm=NONE
+
 " Message displayed in lower left, such as --INSERT--
 hi ModeMsg              ctermfg=238         ctermbg=NONE        cterm=bold
 
@@ -213,6 +215,8 @@ hi link markdownListMarker         DarkGreyBold
 hi link markdownItemDelimiter      markdownListMarker
 hi link markdownInlineDelimiter    Comment
 hi link markdownXmlComment         Comment
+hi link markdownXmlElement         Comment
+hi link markdownLinkReference      Comment
 
 hi link mkdHeading           markdownHeadingDelimiter
 hi link mkdListItem          markdownListMarker
@@ -272,8 +276,9 @@ hi      CocInfoHighlight       cterm=underline guisp=blue
 hi link CocHintVirtualText     Alternative
 hi link CocHintSign            Alternative
 hi      CocHintHighlight       cterm=none guisp=blue
+hi      CocUnusedHighlight     ctermfg=246 cterm=strikethrough
 
-hi link CocRustChainingHint    DarkGrey
+hi link CocRustChainingHint    Hint
 " These only use an 'undercurl'. The colors used are
 " 'maroon' and 'moccasin'.
 hi link CocHintSign            Hint
@@ -282,12 +287,13 @@ hi link CocFloating            Pmenu
 
 " Todo
 highlight link todoOther      Bold
-highlight link todoCheckbox   DarkGrey
+highlight link todoCheckbox   Grey
+highlight link todoDone       Grey
 highlight link todoComment    DarkGrey
-highlight link todoDone       DarkGrey
 highlight link todoNormal     Normal
 highlight link todoImportant  ErrorMsg
 highlight link todoUrgent     Urgent
+highlight      todoCanceled   ctermfg=244 cterm=strikethrough
 
 " Zsh
 hi link zshPrecommand       Keyword
