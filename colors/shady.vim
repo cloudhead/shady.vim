@@ -263,7 +263,7 @@ hi link typescriptOperator   Keyword
 hi link CocErrorVirtualText    Error
 hi link CocErrorSign           Error
 hi      CocErrorHighlight      cterm=undercurl guisp=#B03060
-hi      CocErrorFloat          ctermfg=black ctermbg=red
+hi link CocErrorFloat          Error
 
 hi link CocWarningVirtualText  Warning
 hi link CocWarningSign         Warning
@@ -293,7 +293,9 @@ highlight link todoComment    DarkGrey
 highlight link todoNormal     Normal
 highlight link todoImportant  ErrorMsg
 highlight link todoUrgent     Urgent
+highlight link todoAssignee   Alternative
 highlight      todoCanceled   ctermfg=244 cterm=strikethrough
+highlight      todoCode       ctermfg=247 cterm=italic
 
 " Zsh
 hi link zshPrecommand       Keyword
