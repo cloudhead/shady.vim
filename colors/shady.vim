@@ -16,6 +16,7 @@ let colors_name = "shady"
 hi Normal               ctermfg=251         ctermbg=NONE        cterm=NONE
 hi NonText              ctermfg=234         ctermbg=NONE        cterm=NONE
 
+hi Transparent          ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Cursor               ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi LineNr               ctermfg=236         ctermbg=NONE        cterm=NONE
 
@@ -208,6 +209,8 @@ hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=I
 hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=BOLD
 hi markdownH2                     ctermfg=251        ctermbg=NONE        cterm=BOLD
 
+hi link markdownJekyllFrontMatter  Pragma
+hi link markdownJekyllDelimiter    Pragma
 hi link markdownHeadingDelimiter   markdownRule
 hi link markdownBoldDelimiter      markdownBold
 hi link markdownItalicDelimiter    markdownItalic
@@ -283,7 +286,7 @@ hi link CocRustChainingHint    Hint
 " 'maroon' and 'moccasin'.
 hi link CocHintSign            Hint
 hi link CocCodeLens            DarkGrey
-hi link CocFloating            Pmenu
+hi link CocFloating            Transparent
 
 " Todo
 highlight link todoOther      Bold
