@@ -208,6 +208,9 @@ hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=B
 hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
 hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=BOLD
 hi markdownH2                     ctermfg=251        ctermbg=NONE        cterm=BOLD
+hi markdownStrike                 ctermfg=244        ctermbg=NONE        cterm=STRIKETHROUGH
+" Eg. @cloudhead
+hi markdownUserLinkInText         ctermfg=cyan       ctermbg=NONE        cterm=NONE
 
 hi link markdownJekyllFrontMatter  Pragma
 hi link markdownJekyllDelimiter    Pragma
