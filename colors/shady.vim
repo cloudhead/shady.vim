@@ -117,19 +117,22 @@ hi link pdcCode         pdcCodeBlock
 
 
 hi Grey                 ctermfg=243         ctermbg=NONE       cterm=NONE
-hi GreyBold             ctermfg=250         ctermbg=NONE       cterm=BOLD
+hi GreyBold             ctermfg=245         ctermbg=NONE       cterm=BOLD
 hi DarkGreyBold         ctermfg=237         ctermbg=NONE       cterm=BOLD
 hi DarkGrey             ctermfg=239         ctermbg=NONE       cterm=NONE
 hi Bright               ctermfg=253         ctermbg=NONE       cterm=NONE
 hi Bold                 ctermfg=NONE        ctermbg=NONE       cterm=BOLD
+hi Italic               ctermfg=NONE        ctermbg=NONE       cterm=ITALIC
 hi Urgent               ctermfg=red         ctermbg=NONE       cterm=INVERSE
 hi link Alternative     Special
 hi link Label           Alternative
 
 " HTML/XML
 hi link htmlBold       Normal
-hi link htmlItalic     Normal
+hi link htmlItalic     Italic
 hi link htmlEndTag     htmlTag
+hi link htmlH1         Bold
+hi link htmlH2         Bold
 hi link xmlEndTag      xmlTag
 
 " Haskell
@@ -210,14 +213,15 @@ hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=B
 hi markdownH2                     ctermfg=251        ctermbg=NONE        cterm=BOLD
 hi markdownStrike                 ctermfg=244        ctermbg=NONE        cterm=STRIKETHROUGH
 " Eg. @cloudhead
-hi markdownUserLinkInText         ctermfg=cyan       ctermbg=NONE        cterm=NONE
+hi markdownLink                   ctermfg=cyan       ctermbg=NONE        cterm=NONE
 
 hi link markdownJekyllFrontMatter  Pragma
 hi link markdownJekyllDelimiter    Pragma
+hi link markdownUserLinkInText     markdownLink
 hi link markdownHeadingDelimiter   markdownRule
 hi link markdownBoldDelimiter      markdownBold
 hi link markdownItalicDelimiter    markdownItalic
-hi link markdownListMarker         DarkGreyBold
+hi link markdownListMarker         GreyBold
 hi link markdownItemDelimiter      markdownListMarker
 hi link markdownInlineDelimiter    Comment
 hi link markdownXmlComment         Comment
@@ -226,10 +230,12 @@ hi link markdownLinkReference      Comment
 
 hi link mkdHeading           markdownHeadingDelimiter
 hi link mkdListItem          markdownListMarker
-hi link mkdItalic            markdownItalic
+hi link mkdItalic            Grey
 hi link mkdBold              markdownBold
-hi link mkdCode              markdownCode
 hi link mkdBlockquote        markdownCode
+hi link mkdFootnotes         Grey
+hi link mkdDelimiter         Grey
+hi link mkdInlineUrl         markdownLink
 hi link mkdCodeDelimiter     markdownCodeDelimiter
 hi link mkdRule              markdownRule
 
@@ -269,7 +275,11 @@ hi link typescriptOperator   Keyword
 hi link CocErrorVirtualText    Error
 hi link CocErrorSign           Error
 hi      CocErrorHighlight      cterm=undercurl guisp=#B03060
-hi link CocErrorFloat          Error
+hi      CocErrorFloat          ctermfg=red cterm=none
+hi link CocHintFloat           DarkGrey
+hi link CocFloatDividingLine   DarkGrey
+hi link CocFloatBorder         DarkGrey
+hi link CocFloating            Normal
 
 hi link CocWarningVirtualText  Warning
 hi link CocWarningSign         Warning
@@ -289,7 +299,6 @@ hi link CocRustChainingHint    Hint
 " 'maroon' and 'moccasin'.
 hi link CocHintSign            Hint
 hi link CocCodeLens            DarkGrey
-hi link CocFloating            Transparent
 
 " Todo
 highlight link todoOther      Bold
