@@ -319,3 +319,6 @@ hi link zshPrecommand       Keyword
 hi link graphqlName Normal
 hi link graphqlType Type
 hi      graphqlVariable ctermfg=246 ctermbg=NONE cterm=ITALIC
+
+" Vim
+hi link WinSeparator VertSplit
