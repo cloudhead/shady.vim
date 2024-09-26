@@ -266,6 +266,7 @@ hi link rustCommentLineDoc   Comment
 hi link rustQuestionMark     rustSigil
 hi link rustStorage          Alternative
 hi link rustSelf             Bright
+hi link rustReservedKeyword  Normal
 
 " Typescript
 hi link typescriptExceptions Keyword
