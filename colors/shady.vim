@@ -323,3 +323,7 @@ hi      graphqlVariable ctermfg=246 ctermbg=NONE cterm=ITALIC
 
 " Vim
 hi link WinSeparator VertSplit
+
+" Make
+hi link makeCommands Normal
+hi link makeSpecial  Grey
