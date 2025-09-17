@@ -83,7 +83,7 @@ hi String               ctermfg=245        ctermbg=NONE        cterm=NONE
 hi Number               ctermfg=193        ctermbg=NONE        cterm=NONE
 hi Character            ctermfg=red        ctermbg=NONE        cterm=NONE
 hi PreProc              ctermfg=253        ctermbg=NONE        cterm=BOLD
-hi Operator             ctermfg=253        ctermbg=NONE        cterm=NONE
+hi Operator             ctermfg=248        ctermbg=NONE        cterm=NONE
 hi Pragma               ctermfg=240        ctermbg=NONE        cterm=BOLD
 
 hi Keyword              ctermfg=253        ctermbg=NONE       cterm=BOLD
@@ -98,9 +98,10 @@ hi Function             ctermfg=248         ctermbg=NONE       cterm=NONE
 hi Class                ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Type                 ctermfg=109         ctermbg=NONE       cterm=NONE
 
+hi Link                 ctermfg=081         ctermbg=NONE       cterm=NONE
 hi Special              ctermfg=109         ctermbg=NONE       cterm=NONE
 hi Hint                 ctermfg=237         ctermbg=NONE       cterm=ITALIC
-hi Delimiter            ctermfg=grey        ctermbg=NONE       cterm=NONE
+hi Delimiter            ctermfg=245        ctermbg=NONE       cterm=NONE
 
 hi cIdentifier          ctermfg=255         ctermbg=NONE       cterm=NONE
 hi cFunction            ctermfg=109         ctermbg=NONE       cterm=NONE
@@ -128,7 +129,7 @@ hi link Alternative     Special
 hi link Label           Alternative
 
 " HTML/XML
-hi link htmlBold       Normal
+hi link htmlBold       Bold
 hi link htmlItalic     Italic
 hi link htmlEndTag     htmlTag
 hi link htmlH1         Bold
@@ -201,16 +202,21 @@ hi link rubyArrayDelimiter    Delimiter
 hi link rubyOperator          Operator
 hi link rubyPseudoOperator    Operator
 
+" Yaml
+hi link yamlDocumentStart     Comment
+
 " Markdown
 hi markdownCodeBlock              ctermfg=246        ctermbg=NONE        cterm=ITALIC
 hi markdownCode                   ctermfg=246        ctermbg=NONE        cterm=ITALIC
 hi markdownCodeDelimiter          ctermfg=238        ctermbg=NONE        cterm=ITALIC
 hi markdownRule                   ctermfg=238        ctermbg=NONE        cterm=NONE
 hi markdownBlockquote             ctermfg=242        ctermbg=NONE        cterm=ITALIC
-hi markdownBold                   ctermfg=red        ctermbg=NONE        cterm=BOLD
-hi markdownItalic                 ctermfg=magenta    ctermbg=NONE        cterm=ITALIC
+hi markdownBold                   ctermfg=247        ctermbg=NONE        cterm=BOLD
+hi markdownItalic                 ctermfg=NONE       ctermbg=NONE        cterm=ITALIC
 hi markdownH1                     ctermfg=254        ctermbg=NONE        cterm=BOLD
-hi markdownH2                     ctermfg=251        ctermbg=NONE        cterm=BOLD
+hi markdownH2                     ctermfg=252        ctermbg=NONE        cterm=BOLD
+hi markdownH3                     ctermfg=250        ctermbg=NONE        cterm=BOLD
+hi markdownH4                     ctermfg=248        ctermbg=NONE        cterm=BOLD
 hi markdownStrike                 ctermfg=244        ctermbg=NONE        cterm=STRIKETHROUGH
 " Eg. @cloudhead
 hi markdownLink                   ctermfg=cyan       ctermbg=NONE        cterm=NONE
@@ -219,19 +225,21 @@ hi link markdownJekyllFrontMatter  Pragma
 hi link markdownJekyllDelimiter    Pragma
 hi link markdownUserLinkInText     markdownLink
 hi link markdownHeadingDelimiter   markdownRule
-hi link markdownBoldDelimiter      markdownBold
-hi link markdownItalicDelimiter    markdownItalic
+hi link markdownBoldDelimiter      Comment
+hi link markdownItalicDelimiter    Comment
 hi link markdownListMarker         GreyBold
 hi link markdownItemDelimiter      markdownListMarker
 hi link markdownInlineDelimiter    Comment
 hi link markdownXmlComment         Comment
 hi link markdownXmlElement         Comment
 hi link markdownLinkReference      Comment
+hi link markdownLinkDelimiter      markdownHeadingDelimiter
+hi link markdownLinkTextDelimiter  markdownHeadingDelimiter
 
 hi link mkdHeading           markdownHeadingDelimiter
 hi link mkdListItem          markdownListMarker
 hi link mkdItalic            Grey
-hi link mkdBold              markdownBold
+hi link mkdBold              markdownBoldDelimier
 hi link mkdBlockquote        markdownCode
 hi link mkdFootnotes         Grey
 hi link mkdDelimiter         Grey
@@ -300,6 +308,15 @@ hi link CocRustChainingHint    Hint
 " 'maroon' and 'moccasin'.
 hi link CocHintSign            Hint
 hi link CocCodeLens            DarkGrey
+
+" Assembler
+hi      asmIdentifier         cterm=none
+
+" wiki.vim
+hi link wikiLink              Grey
+hi link wikiLinkRef           Link
+hi link wikiLinkSeparator     Grey
+hi link wikiLinkText          Grey
 
 " Todo
 highlight link todoOther      Bold
